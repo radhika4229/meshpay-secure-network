@@ -1,0 +1,278 @@
+{
+  "info": {
+    "_postman_id": "eb947336-e5ed-4933-a899-c9b99bdfdcda",
+    "name": "UPI Mesh API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47960048"
+  },
+  "item": [
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Accounts",
+      "item": [
+        {
+          "name": "Get Accounts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/accounts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "accounts"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "item": [
+        {
+          "name": "Get Transaction",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/transactions",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Mesh Simulator",
+      "item": [
+        {
+          "name": "Get Mesh State",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/mesh/state",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "mesh",
+                "state"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Gossip Mesh",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/mesh/gossip",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "mesh",
+                "gossip"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Flush Mesh",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/mesh/flush",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "mesh",
+                "flush"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ResetMesh",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/mesh/reset",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "mesh",
+                "reset"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bridge APIs",
+      "item": [
+        {
+          "name": "Bridge Ingest",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"packetId\": \"550e8400-e29b-41d4-a716-446655440000\",\r\n  \"ttl\": 5,\r\n  \"createdAt\": 1746873000000,\r\n  \"ciphertext\": \"base64EncryptedDataHere\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/bridge/ingest",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "bridge",
+                "ingest"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Security",
+      "item": [
+        {
+          "name": "Get server key",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Hotel Lotus\",\r\n  \"city\": \"Delhi\",\r\n  \"contactInfo\": {\r\n    \"address\": \"Central Delhi\",\r\n    \"email\": \"hello@lotushotels.com\",\r\n    \"phoneNumber\": \"9829391929\",\r\n    \"location\": \"74.2381,28.43124\"\r\n  },\r\n  \"amenities\": [\r\n    \"AC\",\r\n    \"Lake View\",\r\n    \"Pool Area\"\r\n  ],\r\n  \"photos\": [\r\n    \"http://via.placeholder.com/50\"\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/server-key",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "server-key"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Demo APIs",
+      "item": [
+        {
+          "name": "Demo send",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"senderVpa\": \"alice@upi\",\r\n  \"receiverVpa\": \"bob@upi\",\r\n  \"amount\": 100,\r\n  \"pin\": \"1234\",\r\n  \"ttl\": 5,\r\n  \"startDevice\": \"phone-alice\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/demo/send",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "demo",
+                "send"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
